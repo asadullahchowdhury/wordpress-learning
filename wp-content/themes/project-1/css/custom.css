@@ -1,0 +1,81 @@
+/*============================================
+Header section
+============================================*/
+
+.header-section {
+    padding: 15px 0;
+}
+
+/*============================================
+Logo section
+============================================*/
+
+.header-section img {
+    max-width: 100%;
+}
+
+
+/*============================================
+Navbar section
+============================================*/
+#nav {
+    margin: 0;
+    padding: 0;
+}
+
+#nav li, a {
+    list-style: none;
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    display: inline-block;
+    padding: 5px 10px;
+    transition: .2s all;
+    position: relative;
+
+}
+
+#nav li:hover {
+    background-color: orangered;
+    color: white;
+    transition: .2s all;
+}
+
+#nav li .has-dropdown {
+    position: absolute;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .6);
+    top: 100%;
+    left: 0;
+    padding: 0;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#nav li .has-dropdown li, a {
+    display: block;
+}
+
+#nav li:hover .has-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+#nav li .has-dropdown .has-dropdown-child {
+    position: absolute;
+    padding: 0;
+    background-color: rgba(0, 0, 0, .6);
+    left: 200px;
+    width: 200px;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+#nav li .has-dropdown li:hover .has-dropdown-child {
+    opacity: 1;
+    visibility: visible;
+}
